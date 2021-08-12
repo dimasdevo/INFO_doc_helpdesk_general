@@ -1,18 +1,19 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1609993216570
+modified: 1628736659096
 created: 1609838111216
 fileName: General
 contents: "swagger: \"2.0\"
 
   info:
 
-  \  description: \"Hello\"
+  \  description: \"Merupakan web service untuk data yang dapat diakses oleh
+  semua orang\"
 
   \  version: \"1.0.0\"
 
-  \  title: \"Helpdesk General\"
+  \  title: \"Helpdesk API General\"
 
   \  termsOfService: \"https://helpdesk-api.indonesian-aerospace.com\"
 
@@ -20,7 +21,7 @@ contents: "swagger: \"2.0\"
 
   \    email: \"infosupport@indonesian-aerospace.com\"
 
-  host: \"helpdesk-api-dev\"
+  host: \"api\"
 
   tags:
 
@@ -28,9 +29,15 @@ contents: "swagger: \"2.0\"
 
   \  description: \"Semua tentang data karyawan\"
 
-  schemes:
+  - name: \"News\"
 
-  - \"https\"
+  \  description: \"Semua tentang data berita\"
+
+  - name: \"Logs\"
+
+  \  description: \"Semua tentang data log aplikasi info dan helpdesk API\"
+
+  schemes:
 
   - \"http\"
 
@@ -105,6 +112,68 @@ contents: "swagger: \"2.0\"
   \        \"400\":
 
   \          description: \"invalid\"
+
+  \  /general/employee-photo/{nik}:
+
+  \    get:
+
+  \      tags:
+
+  \      - \"Employee\"
+
+  \      summary: \"Mencari data foto karyawan\"
+
+  \      description: \"Mencari data foto karyawan\"
+
+  \      operationsId: \"/general/employee-photo\"
+
+  \      produces:
+
+  \      - \"image/jpeg\"
+
+  \      parameters:
+
+  \      - in: path
+
+  \        name: \"nik\"
+
+  \        description: \"NIK karyawan yang spesifik\"
+
+  \        schema:
+
+  \          type: \"string\"
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: \"Succesfull operation\"
+
+  \        \"400\":
+
+  \          description: \"Invalid\"
+
+  \        \"405\":
+
+  \          description: \"Method not allowed\"
+
+  \  /general/news:
+
+  \    get:
+
+  \      tags:
+
+  \      - \"News\"
+
+  \      summary: \"Halaman testing news untuk aplikasi general\"
+
+  \      description : \"Halaman testing news untuk aplikasi general\"
+
+  \      operationsId: \"/general/news\"
+
+  \      produces:
+
+  \      - \"application/json\"
 
   \     "
 contentType: yaml

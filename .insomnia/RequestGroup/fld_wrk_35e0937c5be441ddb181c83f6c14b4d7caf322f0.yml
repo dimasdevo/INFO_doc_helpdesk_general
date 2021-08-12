@@ -1,0 +1,10 @@
+_id: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7caf322f0
+type: RequestGroup
+parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
+modified: 1609989936761
+created: 1609989936761
+name: employee
+description: Semua tentang data karyawan
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1609989936761

@@ -1,0 +1,24 @@
+_id: req_eea8ac952f304c83a1e9c29b201c563e
+type: Request
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7caf322f0
+modified: 1609989936754
+created: 1609989936754
+url: "{{ base_url }}/general/employee"
+name: Mencari data karyawan
+description: Mencari data karyawan
+method: GET
+body: {}
+parameters:
+  - name: nik
+    disabled: true
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1609989936754
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

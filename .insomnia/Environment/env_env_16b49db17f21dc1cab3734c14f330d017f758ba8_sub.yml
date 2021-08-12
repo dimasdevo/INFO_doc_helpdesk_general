@@ -1,0 +1,14 @@
+_id: env_env_16b49db17f21dc1cab3734c14f330d017f758ba8_sub
+type: Environment
+parentId: env_16b49db17f21dc1cab3734c14f330d017f758ba8
+modified: 1609993156829
+created: 1609989936768
+name: Swagger env
+data:
+  base_path: ""
+  scheme: https
+  host: helpdesk-api-dev
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1609989936768

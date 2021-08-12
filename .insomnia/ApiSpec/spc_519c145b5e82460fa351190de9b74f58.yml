@@ -1,0 +1,110 @@
+_id: spc_519c145b5e82460fa351190de9b74f58
+type: ApiSpec
+parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
+modified: 1609993216570
+created: 1609838111216
+fileName: General
+contents: "swagger: \"2.0\"
+
+  info:
+
+  \  description: \"Hello\"
+
+  \  version: \"1.0.0\"
+
+  \  title: \"Helpdesk General\"
+
+  \  termsOfService: \"https://helpdesk-api.indonesian-aerospace.com\"
+
+  \  contact:
+
+  \    email: \"infosupport@indonesian-aerospace.com\"
+
+  host: \"helpdesk-api-dev\"
+
+  tags:
+
+  - name: \"Employee\"
+
+  \  description: \"Semua tentang data karyawan\"
+
+  schemes:
+
+  - \"https\"
+
+  - \"http\"
+
+  paths:
+
+  \  /general/employee:
+
+  \    get:
+
+  \      tags:
+
+  \      - \"Employee\"
+
+  \      summary: \"Mencari data karyawan\"
+
+  \      description: \"Mencari data karyawan\"
+
+  \      operationsId: \"/general/employee\"
+
+  \      produces:
+
+  \      - \"application/json\"
+
+  \      parameters:
+
+  \      - name: \"nik\"
+
+  \        in: \"query\"
+
+  \        description: \"NIK karyawan yang spesifik\"
+
+  \        type: \"string\"
+
+  \      - name: \"nama\"
+
+  \        in: \"query\"
+
+  \        description: \"Nama karyawan yang spesifik\"
+
+  \        type: \"string\"
+
+  \      - name: \"organisasi\"
+
+  \        in: \"query\"
+
+  \        description: \"Organisasi karyawan yang spesifik\"
+
+  \        type: \"string\"
+
+  \      - name: \"email\"
+
+  \        in: \"query\"
+
+  \        description: \"Email karyawan yang spesifik\"
+
+  \        type: \"string\"
+
+  \      - name: \"jabatan\"
+
+  \        in: \"query\"
+
+  \        description: \"Jabatan karyawan yang spesifik\"
+
+  \        type: \"string\"
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: \"succesfull operation\"
+
+  \        \"400\":
+
+  \          description: \"invalid\"
+
+  \     "
+contentType: yaml

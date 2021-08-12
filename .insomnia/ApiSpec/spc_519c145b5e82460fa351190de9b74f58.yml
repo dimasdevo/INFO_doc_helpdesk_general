@@ -1,7 +1,7 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1628737224121
+modified: 1628737652130
 created: 1609838111216
 fileName: General
 contents: "swagger: \"2.0\"
@@ -175,7 +175,7 @@ contents: "swagger: \"2.0\"
 
   \      - \"application/json\"
 
-  \  /general/logfrontend/{:id}:
+  \  /general/logfrontend/{id}:
 
   \    get:
 
@@ -199,11 +199,11 @@ contents: "swagger: \"2.0\"
 
   \        name: \"id\"
 
-  \        description: \"random integer\"
+  \        description: \"error untuk error, all untuk all\"
 
   \        schema:
 
-  \          type: \"str\"
+  \          type: \"string\"
 
   \      responses:
 
@@ -219,7 +219,9 @@ contents: "swagger: \"2.0\"
 
   \          description: \"Method not allowed\"
 
-  \  /general/logwebservice/{:id}:
+  \  \ 
+
+  \  /general/logwebservice/{id}:
 
   \     "
 contentType: yaml

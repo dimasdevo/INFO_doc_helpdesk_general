@@ -1,0 +1,21 @@
+_id: req_wrk_35e0937c5be441ddb181c83f6c14b4d793e28e54
+type: Request
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7126dd3b7
+modified: 1628753219987
+created: 1628753217432
+url: "{{ base_url }}/general/logfrontend/{{ id }}"
+name: Mengambil data log dari aplikasi info frontend
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1628753217432
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

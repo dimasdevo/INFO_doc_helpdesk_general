@@ -1,0 +1,10 @@
+_id: fld_wrk_35e0937c5be441ddb181c83f6c14b4d734c808d0
+type: RequestGroup
+parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
+modified: 1628753219996
+created: 1628753218027
+name: News
+description: Semua tentang data berita
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1628753218027

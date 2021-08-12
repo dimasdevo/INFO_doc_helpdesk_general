@@ -1,0 +1,36 @@
+_id: req_wrk_35e0937c5be441ddb181c83f6c14b4d74bbcfe0b
+type: Request
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7079711ea
+modified: 1628753219992
+created: 1628753217437
+url: "{{ base_url }}/general/employee"
+name: Mencari data karyawan
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: nik
+    disabled: true
+    value: undefined
+  - name: nama
+    disabled: true
+    value: undefined
+  - name: organisasi
+    disabled: true
+    value: undefined
+  - name: email
+    disabled: true
+    value: undefined
+  - name: jabatan
+    disabled: true
+    value: undefined
+headers: []
+authentication: {}
+metaSortKey: -1628753217437
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,22 @@
+_id: req_wrk_35e0937c5be441ddb181c83f6c14b4d7edf7a1b6
+type: Request
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7126dd3b7
+modified: 1628753219985
+created: 1628753217431
+url: "{{ base_url }}/general/logfrontend/{{ id }}"
+name: Menambah data log dari aplikasi info frontend
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1628753217431
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

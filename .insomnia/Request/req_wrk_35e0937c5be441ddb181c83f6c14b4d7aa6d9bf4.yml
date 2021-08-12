@@ -1,17 +1,17 @@
-_id: req_2fd2366e20714f4792c2a6fbb5b7ec8b
+_id: req_wrk_35e0937c5be441ddb181c83f6c14b4d7aa6d9bf4
 type: Request
-parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1609838224207
-created: 1609838210798
-url: http://helpdesk-api-dev/general/employee
-name: Employee
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7079711ea
+modified: 1628753219990
+created: 1628753217436
+url: "{{ base_url }}/general/employee-photo/{{ nik }}"
+name: Mencari data foto karyawan
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1609838210798
+metaSortKey: -1628753217436
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

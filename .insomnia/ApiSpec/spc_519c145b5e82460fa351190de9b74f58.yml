@@ -1,7 +1,7 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1628749349910
+modified: 1628753220005
 created: 1609838111216
 fileName: General
 contents: "openapi: \"3.0.0\"
@@ -24,6 +24,12 @@ contents: "openapi: \"3.0.0\"
   servers:
 
   \  - url: \"http://api\"
+
+  \  - url: \"http://helpdesk-api-dev\"
+
+  \  - url: \"http://helpdesk-api-test\"
+
+  \  - url: \"https://helpdesk-api.indonesian-aerospace.com\"
 
   tags:
 
@@ -404,6 +410,233 @@ contents: "openapi: \"3.0.0\"
   \          description: \"Method not allowed\"
 
   \  /general/logwebservice/{id}:
+
+  \      get:
+
+  \        tags:
+
+  \        - \"Logs\"
+
+  \        summary: \"Mengambil data log dari web service helpdesk\"
+
+  \        description : \"Mengambil data log dari web service helpdesk\"
+
+  \        produces:
+
+  \        - \"application/json\"
+
+  \        parameters:
+
+  \        - in: path
+
+  \          name: \"id\"
+
+  \          description: \"error untuk error, all untuk all\"
+
+  \          schema:
+
+  \            type: \"string\"
+
+  \        responses:
+
+  \          \"200\":
+
+  \            description: \"Succesfull operation\"
+
+  \          \"400\":
+
+  \            description: \"Invalid\"
+
+  \          \"405\":
+
+  \            description: \"Method not allowed\"
+
+  \      post:
+
+  \        tags:
+
+  \        - \"Logs\"
+
+  \        summary: \"Mengambil data log dari web service helpdesk\"
+
+  \        description : \"Mengambil data log dari web service helpdesk\"
+
+  \        produces:
+
+  \        - \"application/json\"
+
+  \        requestBody:
+
+  \          required: true
+
+  \          content:
+
+  \            multipart/form-data:
+
+  \              schema:
+
+  \                type: object
+
+  \                properties:
+
+  \                  modul:
+
+  \                    description: \"Nama modul aplikasi\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  controller:
+
+  \                    description: \"Nama controller aplikasi\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  action:
+
+  \                    description: \"Nama action di controller\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  ip:
+
+  \                    description: \"Alamat Perangkat User\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  nik:
+
+  \                    description: \"Nomor induk karyawan\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  keterangan:
+
+  \                    description: \"Keterangan, informasi berupa kalimat
+  dari aktifitas yang dilakukan: Contoh: Lupa password user id = (NIK)\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  kategori:
+
+  \                    description: \"Kategori untuk lo, 0 = untuk log normal,
+  1 = untuk log failure\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                required:
+
+  \                  - modul
+
+  \                  - controller
+
+  \                  - action
+
+  \                  - ip
+
+  \                  - nik
+
+  \                  - keterangan
+
+
+  \        responses:
+
+  \          \"200\":
+
+  \            description: \"Succesfull operation\"
+
+  \          \"400\":
+
+  \            description: \"Invalid\"
+
+  \          \"405\":
+
+  \            description: \"Method not allowed\"
+
+  \      put:
+
+  \        tags:
+
+  \        - \"Logs\"
+
+  \        summary: \"Mengupdate data log dari aplikasi info frontend\"
+
+  \        description : \"Mengupdate data log dari aplikasi info frontend\"
+
+  \        produces:
+
+  \        - \"application/json\"
+
+  \        parameters:
+
+  \        - in: path
+
+  \          name: \"id\"
+
+  \          description: \"Nomor log activity\"
+
+  \          schema:
+
+  \            type: \"string\"
+
+  \        requestBody:
+
+  \          required: true
+
+  \          content:
+
+  \            application/x-www-form-urlencoded:
+
+  \              schema:
+
+  \                type: object
+
+  \                properties:
+
+  \                  keterangan:
+
+  \                    description: \"Keterangan, informasi berupa kalimat
+  dari aktifitas yang dilakukan: Contoh: Lupa password user id = (NIK)\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \                  kategori:
+
+  \                    description: \"Kategori untuk lo, 0 = untuk log normal,
+  1 = untuk log failure\"
+
+  \                    schema:
+
+  \                      type: string
+
+  \        responses:
+
+  \          \"200\":
+
+  \            description: \"Succesfull operation\"
+
+  \          \"400\":
+
+  \            description: \"Invalid\"
+
+  \          \"405\":
+
+  \            description: \"Method not allowed\"
 
   \     "
 contentType: yaml

@@ -1,8 +1,8 @@
 _id: wrk_35e0937c5be441ddb181c83f6c14b4d7
 type: Workspace
 parentId: null
-modified: 1609993156841
+modified: 1628753220003
 created: 1609838111215
-name: Helpdesk General 1.0.0
-description: Hello
+name: Helpdesk API General 1.0.0
+description: Merupakan web service untuk data yang dapat diakses oleh semua orang
 scope: spec

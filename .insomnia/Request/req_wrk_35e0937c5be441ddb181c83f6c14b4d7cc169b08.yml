@@ -1,0 +1,22 @@
+_id: req_wrk_35e0937c5be441ddb181c83f6c14b4d7cc169b08
+type: Request
+parentId: fld_wrk_35e0937c5be441ddb181c83f6c14b4d7126dd3b7
+modified: 1628753219979
+created: 1628753217426
+url: "{{ base_url }}/general/logwebservice/{{ id }}"
+name: Mengambil data log dari web service helpdesk
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1628753217426
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,10 +1,10 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1628737652130
+modified: 1628742663886
 created: 1609838111216
 fileName: General
-contents: "swagger: \"2.0\"
+contents: "openapi: \"3.0.0\"
 
   info:
 
@@ -219,7 +219,257 @@ contents: "swagger: \"2.0\"
 
   \          description: \"Method not allowed\"
 
-  \  \ 
+  \    post:
+
+  \      tags:
+
+  \      - \"Logs\"
+
+  \      summary: \"Halaman testing news untuk aplikasi general\"
+
+  \      description : \"Halaman testing news untuk aplikasi general\"
+
+  \      operationsId: \"/general/news\"
+
+  \      consumes:
+
+  \      - multipart/form-data
+
+  \      produces:
+
+  \      - \"application/json\"
+
+  \      parameters:
+
+  \      - in: formData
+
+  \        name: modul
+
+  \        description: \"Nama modul aplikasi\"
+
+  \        required: true
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: controller
+
+  \        required: true
+
+  \        description: \"Nama controller aplikasi\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: action
+
+  \        required: true
+
+  \        description: \"Nama action di controller\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: ip
+
+  \        required: true
+
+  \        description: \"Alamat Perangkat User\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: nik
+
+  \        description: \"Nomor induk karyawan\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: keterangan
+
+  \        required: true
+
+  \        description: \"Keterangan, informasi berupa kalimat dari aktifitas
+  yang dilakukan: Contoh: Lupa password user id = (NIK)\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: formData
+
+  \        name: kategori
+
+  \        required: true
+
+  \        description: \"Kategori untuk lo, 0 = untuk log normal, 1 = untuk
+  log failure\"
+
+  \        schema:
+
+  \          type: string
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: \"Succesfull operation\"
+
+  \        \"400\":
+
+  \          description: \"Invalid\"
+
+  \        \"405\":
+
+  \          description: \"Method not allowed\"
+
+  \    put:
+
+  \      tags:
+
+  \      - \"Logs\"
+
+  \      summary: \"Halaman testing news untuk aplikasi general\"
+
+  \      description : \"Halaman testing news untuk aplikasi general\"
+
+  \      operationsId: \"/general/news\"
+
+  \      consumes:
+
+  \      - application/x-www-form-urlencoded
+
+  \      produces:
+
+  \      - \"application/json\"
+
+  \      parameters:
+
+  \      - in: path
+
+  \        name: \"id\"
+
+  \        description: \"id dari log aplikasi\"
+
+  \        required: true
+
+  \        schema:
+
+  \          type: \"string\"
+
+  \      - in: body
+
+  \        name: modul
+
+  \        description: \"Nama modul aplikasi\"
+
+  \        required: true
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: controller
+
+  \        required: true
+
+  \        description: \"Nama controller aplikasi\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: action
+
+  \        required: true
+
+  \        description: \"Nama action di controller\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: ip
+
+  \        required: true
+
+  \        description: \"Alamat Perangkat User\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: nik
+
+  \        description: \"Nomor induk karyawan\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: keterangan
+
+  \        required: true
+
+  \        description: \"Keterangan, informasi berupa kalimat dari aktifitas
+  yang dilakukan: Contoh: Lupa password user id = (NIK)\"
+
+  \        schema:
+
+  \          type: string
+
+  \      - in: query
+
+  \        name: kategori
+
+  \        required: true
+
+  \        description: \"Kategori untuk lo, 0 = untuk log normal, 1 = untuk
+  log failure\"
+
+  \        schema:
+
+  \          type: string
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: \"Succesfull operation\"
+
+  \        \"400\":
+
+  \          description: \"Invalid\"
+
+  \        \"405\":
+
+  \          description: \"Method not allowed\"
 
   \  /general/logwebservice/{id}:
 

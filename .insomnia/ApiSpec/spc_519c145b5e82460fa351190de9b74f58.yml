@@ -1,7 +1,7 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1628742663886
+modified: 1628749349910
 created: 1609838111216
 fileName: General
 contents: "openapi: \"3.0.0\"
@@ -21,7 +21,9 @@ contents: "openapi: \"3.0.0\"
 
   \    email: \"infosupport@indonesian-aerospace.com\"
 
-  host: \"api\"
+  servers:
+
+  \  - url: \"http://api\"
 
   tags:
 
@@ -36,10 +38,6 @@ contents: "openapi: \"3.0.0\"
   - name: \"Logs\"
 
   \  description: \"Semua tentang data log aplikasi info dan helpdesk API\"
-
-  schemes:
-
-  - \"http\"
 
   paths:
 
@@ -183,11 +181,9 @@ contents: "openapi: \"3.0.0\"
 
   \      - \"Logs\"
 
-  \      summary: \"Halaman testing news untuk aplikasi general\"
+  \      summary: \"Mengambil data log dari aplikasi info frontend\"
 
-  \      description : \"Halaman testing news untuk aplikasi general\"
-
-  \      operationsId: \"/general/news\"
+  \      description : \"Mengambil data log dari aplikasi info frontend\"
 
   \      produces:
 
@@ -225,105 +221,101 @@ contents: "openapi: \"3.0.0\"
 
   \      - \"Logs\"
 
-  \      summary: \"Halaman testing news untuk aplikasi general\"
+  \      summary: \"Menambah data log dari aplikasi info frontend\"
 
-  \      description : \"Halaman testing news untuk aplikasi general\"
-
-  \      operationsId: \"/general/news\"
-
-  \      consumes:
-
-  \      - multipart/form-data
+  \      description : \"Menambah data log dari aplikasi info frontend\"
 
   \      produces:
 
   \      - \"application/json\"
 
-  \      parameters:
-
-  \      - in: formData
-
-  \        name: modul
-
-  \        description: \"Nama modul aplikasi\"
+  \      requestBody:
 
   \        required: true
 
-  \        schema:
+  \        content:
 
-  \          type: string
+  \          multipart/form-data:
 
-  \      - in: formData
+  \            schema:
 
-  \        name: controller
+  \              type: object
 
-  \        required: true
+  \              properties:
 
-  \        description: \"Nama controller aplikasi\"
+  \                modul:
 
-  \        schema:
+  \                  description: \"Nama modul aplikasi\"
 
-  \          type: string
+  \                  schema:
 
-  \      - in: formData
+  \                    type: string
 
-  \        name: action
+  \                controller:
 
-  \        required: true
+  \                  description: \"Nama controller aplikasi\"
 
-  \        description: \"Nama action di controller\"
+  \                  schema:
 
-  \        schema:
+  \                    type: string
 
-  \          type: string
+  \                action:
 
-  \      - in: formData
+  \                  description: \"Nama action di controller\"
 
-  \        name: ip
+  \                  schema:
 
-  \        required: true
+  \                    type: string
 
-  \        description: \"Alamat Perangkat User\"
+  \                ip:
 
-  \        schema:
+  \                  description: \"Alamat Perangkat User\"
 
-  \          type: string
+  \                  schema:
 
-  \      - in: formData
+  \                    type: string
 
-  \        name: nik
+  \                nik:
 
-  \        description: \"Nomor induk karyawan\"
+  \                  description: \"Nomor induk karyawan\"
 
-  \        schema:
+  \                  schema:
 
-  \          type: string
+  \                    type: string
 
-  \      - in: formData
+  \                keterangan:
 
-  \        name: keterangan
+  \                  description: \"Keterangan, informasi berupa kalimat dari
+  aktifitas yang dilakukan: Contoh: Lupa password user id = (NIK)\"
 
-  \        required: true
+  \                  schema:
 
-  \        description: \"Keterangan, informasi berupa kalimat dari aktifitas
-  yang dilakukan: Contoh: Lupa password user id = (NIK)\"
+  \                    type: string
 
-  \        schema:
+  \                kategori:
 
-  \          type: string
+  \                  description: \"Kategori untuk lo, 0 = untuk log normal, 1
+  = untuk log failure\"
 
-  \      - in: formData
+  \                  schema:
 
-  \        name: kategori
+  \                    type: string
 
-  \        required: true
+  \              required:
 
-  \        description: \"Kategori untuk lo, 0 = untuk log normal, 1 = untuk
-  log failure\"
+  \                - modul
 
-  \        schema:
+  \                - controller
 
-  \          type: string
+  \                - action
+
+  \                - ip
+
+  \                - nik
+
+  \                - keterangan
+
+  \             \ 
 
   \      responses:
 
@@ -345,15 +337,9 @@ contents: "openapi: \"3.0.0\"
 
   \      - \"Logs\"
 
-  \      summary: \"Halaman testing news untuk aplikasi general\"
+  \      summary: \"Mengupdate data log dari aplikasi info frontend\"
 
-  \      description : \"Halaman testing news untuk aplikasi general\"
-
-  \      operationsId: \"/general/news\"
-
-  \      consumes:
-
-  \      - application/x-www-form-urlencoded
+  \      description : \"Mengupdate data log dari aplikasi info frontend\"
 
   \      produces:
 
@@ -365,97 +351,43 @@ contents: "openapi: \"3.0.0\"
 
   \        name: \"id\"
 
-  \        description: \"id dari log aplikasi\"
-
-  \        required: true
+  \        description: \"Nomor log activity\"
 
   \        schema:
 
   \          type: \"string\"
 
-  \      - in: body
-
-  \        name: modul
-
-  \        description: \"Nama modul aplikasi\"
+  \      requestBody:
 
   \        required: true
 
-  \        schema:
+  \        content:
 
-  \          type: string
+  \          application/x-www-form-urlencoded:
 
-  \      - in: query
+  \            schema:
 
-  \        name: controller
+  \              type: object
 
-  \        required: true
+  \              properties:
 
-  \        description: \"Nama controller aplikasi\"
+  \                keterangan:
 
-  \        schema:
+  \                  description: \"Keterangan, informasi berupa kalimat dari
+  aktifitas yang dilakukan: Contoh: Lupa password user id = (NIK)\"
 
-  \          type: string
+  \                  schema:
 
-  \      - in: query
+  \                    type: string
 
-  \        name: action
+  \                kategori:
 
-  \        required: true
+  \                  description: \"Kategori untuk lo, 0 = untuk log normal, 1
+  = untuk log failure\"
 
-  \        description: \"Nama action di controller\"
+  \                  schema:
 
-  \        schema:
-
-  \          type: string
-
-  \      - in: query
-
-  \        name: ip
-
-  \        required: true
-
-  \        description: \"Alamat Perangkat User\"
-
-  \        schema:
-
-  \          type: string
-
-  \      - in: query
-
-  \        name: nik
-
-  \        description: \"Nomor induk karyawan\"
-
-  \        schema:
-
-  \          type: string
-
-  \      - in: query
-
-  \        name: keterangan
-
-  \        required: true
-
-  \        description: \"Keterangan, informasi berupa kalimat dari aktifitas
-  yang dilakukan: Contoh: Lupa password user id = (NIK)\"
-
-  \        schema:
-
-  \          type: string
-
-  \      - in: query
-
-  \        name: kategori
-
-  \        required: true
-
-  \        description: \"Kategori untuk lo, 0 = untuk log normal, 1 = untuk
-  log failure\"
-
-  \        schema:
-
-  \          type: string
+  \                    type: string
 
   \      responses:
 

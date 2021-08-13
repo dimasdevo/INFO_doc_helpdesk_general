@@ -1,7 +1,7 @@
 _id: spc_519c145b5e82460fa351190de9b74f58
 type: ApiSpec
 parentId: wrk_35e0937c5be441ddb181c83f6c14b4d7
-modified: 1628838597006
+modified: 1628838701774
 created: 1609838111216
 fileName: INFO_GENERAL
 contents: "openapi: \"3.0.0\"

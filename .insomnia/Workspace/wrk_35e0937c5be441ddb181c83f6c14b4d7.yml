@@ -5,4 +5,4 @@ modified: 1628753220003
 created: 1609838111215
 name: Helpdesk API General 1.0.0
 description: Merupakan web service untuk data yang dapat diakses oleh semua orang
-scope: spec
+scope: design
